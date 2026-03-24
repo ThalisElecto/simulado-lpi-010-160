@@ -158,6 +158,10 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,san
 .btn-danger:hover{background:rgba(239,68,68,.1);}
 .btn:disabled{opacity:.4;cursor:default;transform:none;}
 
+/* ===== FOOTER ===== */
+.site-footer{background:var(--surface);border-top:1px solid var(--border);padding:16px 28px;text-align:center;font-size:12px;color:var(--muted);margin-top:auto;}
+.site-footer span{color:var(--accent);font-weight:600;}
+
 /* ===== CANCEL CONFIRM OVERLAY ===== */
 .cancel-overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;z-index:200;}
 .cancel-overlay.show{display:flex;}
@@ -1665,6 +1669,15 @@ function buildMenuChart() {
 window.addEventListener('load', () => {
   buildMenuChart();
 });
+</script>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  © <span id="footerYear"></span> <span>Thalis Electo</span>. Todos os direitos reservados.
+</footer>
+
+<script>
+  document.getElementById('footerYear').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
